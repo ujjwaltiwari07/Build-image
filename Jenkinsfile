@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS = credentials('dockerhub-creds')
-        IMAGE_NAME = "ujjwaltiwari07/ci-cd-demo"
+        IMAGE_NAME = "ujjwaltiwari07/new-img"
         IMAGE_TAG = "latest"
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'master', url: 'https://github.com/ujjwaltiwari07/Ci-CD.git'
+                git branch: 'master', url: 'https://github.com/ujjwaltiwari07/Build-image.git'
             }
         }
 
